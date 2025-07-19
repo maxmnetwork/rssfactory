@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field name="id" type="text" default="0" readonly="true" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC"/>
+        <field name="title" type="text" required="true"/>
+        <field name="adtext" type="editor" filter="raw"/>
+        <field name="categories_assigned" type="category" extension="com_rssfactory" multiple="true"
+               label="COM_RSSFACTORY_FORM_FIELD_CATEGORIES_ASSIGNED_LABEL"
+               description="COM_RSSFACTORY_FORM_FIELD_CATEGORIES_ASSIGNED_DESC"/>
+        <field name="published" type="list" class="inputbox span12 small" size="1" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+    </fieldset>
+</form>

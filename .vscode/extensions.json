@@ -1,0 +1,15 @@
+{
+    "recommendations": [
+        "linyang95.phpmd",
+        "bmewburn.vscode-intelephense-client",
+        "kokororin.vscode-phpfmt",
+        "tiansin.php-debug",
+        "dotjoshjohnson.xml",
+        "shd101wyy.markdown-preview-enhanced",
+        "esbenp.prettier-vscode",
+        "anibalsanchez.vs-code-joomla-snippets",
+        "siddiqur.vscode-joomla-4-snippets",
+        "ritwickdey.liveserver",
+        "github.vscode-pull-request-github"
+    ]
+}

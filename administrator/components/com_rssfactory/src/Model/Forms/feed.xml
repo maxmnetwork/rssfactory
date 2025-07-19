@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="details">
+        <field name="id" type="text" default="0" readonly="true" class="readonly"
+               label="JGLOBAL_FIELD_ID_LABEL" description="JGLOBAL_FIELD_ID_DESC"/>
+        <field name="title" type="text" required="true"/>
+        <field name="published" type="list" default="1">
+            <option value="1">JPUBLISHED</option>
+            <option value="0">JUNPUBLISHED</option>
+        </field>
+        <field name="cat" type="category" extension="com_rssfactory" required="true"/>
+        <field name="nrfeeds" type="text" default="15"/>
+        <field name="current_icon" type="RssFactoryProFeedIcon"/>
+        <field name="refresh_icon" type="FactoryAjaxLink" display="vertical" task="feed.refreshicon"
+               update="current_icon"/>
+        <field name="protocol" type="list" default="http">
+            <option value="http">HTTP</option>
+            <option value="ftp">FTP</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="filter">
+        <field name="enablerefreshwordfilter" type="FactoryBoolean" default="0" global="true"/>
+
+        <field name="spacer1" type="spacer" hr="true"/>
+
+        <field name="refreshallowedwords" type="textarea" display="vertical" rows="5"/>
+        <fields name="params">
+            <field name="merge_refreshallowedwords" type="FactoryBoolean" default="0"/>
+        </fields>
+
+        <field name="spacer2" type="spacer" hr="true"/>
+
+        <field name="refreshexactmatchwords" type="textarea" display="vertical" rows="5"/>
+        <fields name="params">
+            <field name="merge_refreshexactmatchwords" type="FactoryBoolean" default="0"/>
+        </fields>
+
+        <field name="spacer3" type="spacer" hr="true"/>
+
+        <field name="refreshbannedwords" type="textarea" display="vertical" rows="5"/>
+        <fields name="params">
+            <field name="merge_refreshbannedwords" type="FactoryBoolean" default="0"/>
+        </fields>
+    </fieldset>
+
+    <fieldset name="http">
+        <field name="url" type="text" display="vertical"/>
+    </fieldset>
+
+    <fieldset name="ftp">
+        <field name="ftp_host" type="text"/>
+        <field name="ftp_username" type="text"/>
+        <field name="ftp_password" type="text"/>
+        <field name="ftp_path" type="text"/>
+        <field name="ftp_connection_status" type="RssFactoryProInfo" option="text"
+               default="feed_ftp_connection_not_tested"/>
+        <field name="ftp_test_connection" type="FactoryAjaxLink" display="vertical" task="feed.testftp"
+               update="ftp_connection_status"/>
+    </fieldset>
+</form>

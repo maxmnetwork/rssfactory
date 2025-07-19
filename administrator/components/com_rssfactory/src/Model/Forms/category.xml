@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="advanced">
+            <field name="relevant_categories" type="category" extension="com_content" multiple="true"
+                   label="COM_RSSFACTORY_FORM_CATEGORY_RELEVANT_CATEGORIES_LABEL"
+                   description="COM_RSSFACTORY_FORM_CATEGORY_RELEVANT_CATEGORIES_DESC"/>
+        </fieldset>
+    </fields>
+</form>

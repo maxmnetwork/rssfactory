@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="import2content_details">
+        <field name="i2c_enabled" type="FactoryBoolean" default="0"/>
+        <field name="i2c_full_article" type="FactoryBoolean" default="0"/>
+    </fieldset>
+
+    <fieldset name="import2content_filter">
+        <field name="i2c_enable_word_filter" type="FactoryBoolean" default="0"/>
+        <field name="i2c_words_white_list" type="textarea" display="vertical" rows="5"/>
+        <field name="i2c_words_black_list" type="textarea" display="vertical" rows="5"/>
+        <field name="i2c_words_exact_list" type="textarea" display="vertical" rows="5"/>
+        <field name="i2c_words_replacements" type="textarea" display="vertical" rows="5"/>
+    </fieldset>
+
+    <fields name="params">
+        <fieldset name="import2content_relevant_stories">
+            <field name="enable_relevant_stories" type="FactoryBoolean" default="" global="true"/>
+            <field name="relevant_stories_position" type="FactoryBoolean" default="-1" global="true">
+                <option value="-1">JGLOBAL_USE_GLOBAL</option>
+                <option value="1">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RELEVANT_STORIES_POSITION_BEFORE</option>
+                <option value="2">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RELEVANT_STORIES_POSITION_AFTER</option>
+            </field>
+            <field name="relevant_stories_limit" type="text" default="5"/>
+        </fieldset>
+    </fields>
+
+    <fieldset name="import2content_publishing">
+        <field name="i2c_author" type="user"/>
+        <field name="i2c_catid" type="category" extension="com_content" default="">
+            <option value=""></option>
+        </field>
+        <field name="i2c_publishing_period" type="text" default="5"/>
+        <field name="i2c_frontpage" type="FactoryBoolean" default="0"/>
+        <field name="i2c_published" type="FactoryBoolean" default="0" global="true"/>
+        <fields name="params">
+            <field name="i2c_access_level" type="accesslevel"/>
+        </fields>
+        <fields name="params">
+            <field name="i2c_include_enclosures" type="FactoryBoolean" default="0"/>
+        </fields>
+        <field name="i2c_prepend" type="textarea" rows="5" display="vertical"/>
+        <field name="i2c_append" type="textarea" rows="5" display="vertical"/>
+    </fieldset>
+
+    <fieldset name="import2content_rules_details">
+        <field name="i2c_rules_details" type="RssFactoryProInfo" option="text" default="i2c_rules_details"
+               hasLabel="false" display="vertical"/>
+    </fieldset>
+
+    <fieldset name="import2content_rules_preview">
+        <field name="preview_debug" type="FactoryBoolean" default="0"/>
+        <field name="i2c_rules_preview_story" type="RssFactoryFeedRulesPreview" display="vertical" hasLabel="false"/>
+    </fieldset>
+
+    <fieldset name="import2content_rules">
+        <field name="rules_help" type="RssFactoryProInfo" default="rules_help_text"
+               option="link" hasLabel="false" display="vertical"
+               link="http://wiki.thephpfactory.com/doku.php?id=joomla30:rssfactorypro:import2content#article_rules"/>
+        <fields name="params">
+            <fieldset name="import2content_rules">
+                <field name="i2c_rules" type="RssFactoryFeedRules" display="vertical" hasLabel="false"/>
+            </fieldset>
+        </fields>
+    </fieldset>
+</form>

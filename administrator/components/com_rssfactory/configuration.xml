@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+    <fieldset name="general_general">
+        <field name="showSearch" type="FactoryBoolean" default="1"/>
+        <!--<field name="enableFavorites" type="FactoryBoolean" default="1" />-->
+        <field name="unpublisherr" type="FactoryBoolean" default="0"/>
+    </fieldset>
+
+    <fieldset name="general_ads">
+        <field name="enable_ads" type="FactoryBoolean" default="1"/>
+        <field name="ads_rows_repeat" type="text" default="3" filter="integer"/>
+        <!--<field name="nrads" type="text" default="0" filter="integer" />-->
+    </fieldset>
+
+    <fieldset name="general_voting">
+        <!--<field name="enablevoting" type="FactoryBoolean" default="1" />-->
+        <!--<field name="publicvoting" type="FactoryBoolean" default="0" />-->
+        <field name="negativerating" type="FactoryBoolean" default="0"/>
+    </fieldset>
+
+    <fieldset name="general_comments">
+        <!--<field name="enableComments" type="FactoryBoolean" default="1" />-->
+        <!--<field name="guestComments" type="FactoryBoolean" default="0" />-->
+        <field name="approveComments" type="FactoryBoolean" default="0"/>
+        <fields name="comments">
+            <field name="notification" type="usergrouplist" multiple="true" class="chosen" />
+        </fields>
+    </fieldset>
+
+    <fieldset name="general_submittedfeeds">
+        <field name="enablesubmitingfeeds" type="FactoryBoolean" default="1"/>
+        <field name="guestsubmitingfeeds" type="FactoryBoolean" default="1"/>
+    </fieldset>
+
+    <fieldset name="general_charset">
+        <field name="force_charset" type="text" default=""/>
+        <field name="force_output_charset" type="text" default=""/>
+    </fieldset>
+
+    <fieldset name="refresh_general">
+        <field name="refresh_general_info" type="RssFactoryProInfo" option="text" hasLabel="false"
+               default="refresh_general_info" display="vertical"/>
+        <field name="archivedeleteinterval" type="text" default="2" filter="integer"/>
+        <field name="detectduplicates" type="list" default="title_description">
+            <option value="title">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_DETECTDUPLICATES_OPTION_TITLE</option>
+            <option value="description">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_DETECTDUPLICATES_OPTION_DESCRIPTION
+            </option>
+            <option value="title_description">
+                COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_DETECTDUPLICATES_OPTION_TITLE_DESCRIPTION
+            </option>
+            <option value="pubdate">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_DETECTDUPLICATES_OPTION_PUBDATE</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="refresh_word_filter">
+        <field name="refresh_word_filter" type="RssFactoryProInfo" option="text" hasLabel="false"
+               default="refresh_word_filter_info" display="vertical"/>
+        <field name="enablerefreshwordfilter" type="FactoryBoolean" default="0"/>
+        <field name="refreshallowedwords" type="textarea" display="vertical" rows="5"/>
+        <field name="refreshexactmatchwords" type="textarea" display="vertical" rows="5"/>
+        <field name="refreshbannedwords" type="textarea" display="vertical" rows="5"/>
+    </fieldset>
+
+    <fieldset name="cron_cron">
+        <field name="refresh_password" type="text" default=""/>
+        <field name="refresh_link" type="RssFactoryProInfo" option="refresh_link"/>
+        <field name="refreshscripttimelimit" type="text" default="180"/>
+
+        <fields name="cron">
+            <field name="memory_limit" type="number" filter="integer" default="128"/>
+        </fields>
+
+        <fields name="cron">
+            <field name="log" type="FactoryBoolean" default="0" />
+        </fields>
+    </fieldset>
+
+    <fieldset name="cron_pseudo_cron">
+        <field name="use_pseudocron" type="FactoryBoolean" default="1"/>
+        <field name="refreshinterval" type="text" default="1440"/>
+        <field name="pseudocron_last_refresh" type="text" readonly="true" disabled="true"/>
+    </fieldset>
+
+    <fieldset name="display_general">
+        <field name="showcategory" type="FactoryBoolean" default="1"/>
+        <field name="cat_previewnr" type="text" default="5" filter="integer"/>
+        <field name="open_feed_new_window" type="FactoryBoolean" default="1"/>
+        <field name="showcatdescription" type="FactoryBoolean" default="1"/>
+        <field name="showcatcontents" type="FactoryBoolean" default="1"/>
+        <field name="showcatsubcats" type="FactoryBoolean" default="1"/>
+        <field name="showemptycategories" type="FactoryBoolean" default="1"/>
+        <field name="showrelatedcats" type="FactoryBoolean" default="1"/>
+        <field name="showcatpath" type="FactoryBoolean" default="1"/>
+        <field name="showcircle" type="FactoryBoolean" default="1"/>
+        <field name="cat_nrcols" type="list" default="3">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </field>
+    </fieldset>
+
+    <fieldset name="display_read_more_link">
+        <field name="readmore_options" type="FactoryBoolean" default="0"/>
+
+        <field name="story_source_link_target" type="list" default="new_window">
+            <option value="same_window">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SAME_WINDOW</option>
+            <option value="new_window">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_OUTPUT_IFRAME_POPUP</option>
+        </field>
+
+        <field name="story_source_link_behavior" type="list" default="link">
+            <option value="link">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LINK</option>
+            <option value="toolbar">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_OUTPUT_IFRAME_TOOLBAR</option>
+            <option value="modal">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_OUTPUT_IFRAME_MODAL</option>
+        </field>
+        <!--<field name="iframe_height" type="text" default="0" />-->
+    </fieldset>
+
+    <fieldset name="display_feeds">
+        <field name="showemptysources" type="FactoryBoolean" default="0">
+            <option value="0">JHIDE</option>
+            <option value="1">JSHOW</option>
+        </field>
+        <!--<field name="suppress_img" type="FactoryBoolean" default="1" />-->
+        <!--<field name="suppress_embedded" type="FactoryBoolean" default="1">-->
+        <!--<option value="1">JHIDE</option>-->
+        <!--<option value="0">JSHOW</option>-->
+        <!--</field>-->
+        <field name="strip_html_tags" type="FactoryBoolean" default="1"/>
+        <field name="allowed_html_tags" type="text"/>
+        <!--<field name="showtruetitle" type="list" default="0">-->
+        <!--<option value="0">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWTRUETITLE_OPTION_FEED</option>-->
+        <!--<option value="1">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWTRUETITLE_OPTION_XML</option>-->
+        <!--</field>-->
+        <!--<field name="channellink" type="text" />-->
+        <field name="feedsperpage" type="text" default="7"/>
+        <field name="liststyle" type="list" default="list">
+            <option value="tiled">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_OPTION_TILED</option>
+            <option value="list">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_OPTION_LIST</option>
+            <option value="tabbed">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_OPTION_TABBED</option>
+            <option value="slider">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_OPTION_SLIDER</option>
+            <!--<option value="dragdiv">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_LISTSTYLE_OPTION_DRAGDIV</option>-->
+        </field>
+        <field name="list_style_channel_title_display" type="FactoryBoolean" default="1" showon="liststyle:list" />
+        <field name="showfeeddescription" type="list" default="diggstyle">
+            <option value="tooltip">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_OPTION_TOOLTIP</option>
+            <option value="table">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_OPTION_TABLE</option>
+            <option value="modal">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_OPTION_MODAL</option>
+            <option value="none">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_OPTION_NONE</option>
+            <!--<option value="diggstyle">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_SHOWFEEDDESCRIPTION_OPTION_DIGGSTYLE</option>-->
+        </field>
+        <field name="liststylecolumns" type="text" default="2"/>
+        <!--<field name="orderbydate" type="FactoryBoolean" default="1" />-->
+        <field name="use_favicons" type="FactoryBoolean" default="1"/>
+        <!--<field name="hideBullet" type="FactoryBoolean" default="0" />-->
+        <field name="date_format" type="list" default="l, d F Y">
+            <option value="l, d F Y">l, d F Y</option>
+            <option value="Y-m-d">YYYY-MM-DD</option>
+            <option value="m/d/Y">MM/DD/YYYY</option>
+            <option value="d/m/Y">DD/MM/YYYY</option>
+            <option value="d-m-Y">DD-MM-YYYY</option>
+            <option value="n/j/y">m/d/yy</option>
+            <option value="j/n/y">d/m/yy</option>
+            <option value="j-m-y">d-m-yy</option>
+            <option value="Y-m-d H:i:s">YYYY-MM-DD h:m:s</option>
+            <option value="m/d/Y H:i:s">MM/DD/YYYY h:m:s</option>
+            <option value="d/m/Y H:i:s">DD/MM/YYYY h:m:s</option>
+            <option value="d-m-Y H:i:s">DD-MM-YYYY h:m:s</option>
+            <option value="n/j/y H:i:s">m/d/yy h:m:s</option>
+            <option value="j/n/y H:i:s">d/m/yy h:m:s</option>
+            <option value="j-m-y H:i:s">d-m-yy h:m:s</option>
+        </field>
+        <field name="hideDate" type="FactoryBoolean" default="0"/>
+        <field name="show_enclosures" type="FactoryBoolean" default="0"/>
+    </fieldset>
+
+    <!--<fieldset name="systeminfo_file_permissions">-->
+    <!--<field name="ico_folder" type="FactoryFolderWritable" folder="images" />-->
+    <!--</fieldset>-->
+
+    <fieldset name="systeminfo_joomla_settings">
+        <field name="joomla_error_reporting" type="FactoryJoomlaSettings" option="error_reporting"/>
+        <field name="joomla_site_locale_time" type="FactoryJoomlaSettings" option="locale_time"/>
+    </fieldset>
+
+    <fieldset name="systeminfo_php_settings">
+        <field name="php_version" type="FactoryPhpSettings" option="version" hasLabel="false" display="vertical"/>
+        <field name="php_display_errors" type="FactoryPhpSettings" option="display_errors"/>
+        <field name="php_file_uploads" type="FactoryPhpSettings" option="file_uploads"/>
+        <field name="php_curl_support" type="FactoryPhpSettings" option="curl_support"/>
+        <field name="php_gmt_time" type="FactoryPhpSettings" option="gmt_time"/>
+    </fieldset>
+
+
+    <fieldset name="about_general">
+        <field name="about_current_version" type="FactoryComponentSettings" option="current_version"/>
+        <field name="about_latest_version" type="FactoryComponentSettings" option="latest_version"/>
+    </fieldset>
+
+    <fieldset name="general_cache">
+        <field name="cache_content" type="RssFactoryProInfo" option="cache_content"/>
+        <field name="clear_cache_content" type="FactoryAjaxLink" display="vertical" task="cache.clear"
+               update="cache_content"/>
+        <field name="cache_table_status" type="RssFactoryProInfo" option="cache_table_status"/>
+        <field name="cache_optimize" type="FactoryAjaxLink" display="vertical" task="cache.optimize"
+               update="cache_table_status"/>
+    </fieldset>
+
+    <fieldset name="permissions" display="vertical">
+        <field name="rules" type="FactoryRules" filter="rules" validate="rules" component="com_rssfactory" hiddenLabel="true"
+               section="component">
+            <action name="frontend.favorites"
+                    title="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_FAVORITES_LABEL"
+                    description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_FAVORITES_DESC"/>
+
+            <action name="frontend.voting"
+                    title="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_VOTES_LABEL"
+                    description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_VOTES_DESC"/>
+
+            <action name="frontend.comment.view"
+                    title="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_COMMENT_VIEW_LABEL"
+                    description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_COMMENT_VIEW_DESC"/>
+            <action name="frontend.comment.create"
+                    title="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_COMMENT_CREATE_LABEL"
+                    description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_COMMENT_CREATE_DESC"/>
+            <action name="frontend.comment.manage"
+                    title="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_COMMENT_MANAGE_LABEL"
+                    description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_COMMENT_MANAGE_DESC"/>
+
+            <action name="frontend.submitfeed"
+                    title="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_SUBMITFEED_LABEL"
+                    description="COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RULES_FRONTEND_SUBMITFEED_DESC"/>
+            <action name="backend.access" title="Backend component access"
+                    description="Allow users in the group to access the backend of the component."/>
+            <action name="backend.settings" title="Backend settings management"
+                    description="Allow users in the group to manage the settings of the component."/>
+        </field>
+    </fieldset>
+</config>

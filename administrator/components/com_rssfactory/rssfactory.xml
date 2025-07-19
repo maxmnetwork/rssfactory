@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" method="upgrade" version="4.0">
+  <name>com_rssfactory</name>
+  <author>JDev GPT by Nijssen Media</author>
+  <creationDate>2025-07-14</creationDate>
+  <copyright>(C) thePHPfactory / SKEPSIS Consult SRL</copyright>
+  <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+  <version>4.2.3</version>
+  <description>RSS Factory for Joomla 4+</description>
+
+  <!-- Site Files -->
+  <files>
+    <folder>site</folder>
+  </files>
+
+  <!-- Administrator Files -->
+  <administration>
+    <menu link="index.php?option=com_rssfactory&amp;view=feeds">RSS Factory</menu>
+
+    <submenu>
+      <menu link="index.php?option=com_rssfactory&amp;view=feeds">Feeds</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=comments">Comments</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=ads">Ads</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=submittedfeeds">Submitted Feeds</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=categories">Categories</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=settings">Settings</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=backup">Backup &amp; Restore</menu>
+      <menu link="index.php?option=com_rssfactory&amp;view=about">About</menu>
+    </submenu>
+
+    <files folder="administrator">
+      <filename>access.xml</filename>
+      <filename>configuration.xml</filename>
+      <filename>extension.json</filename>
+      <filename>script.php</filename>
+      <folder>src</folder>
+      <folder>sqls</folder>
+      <folder>language</folder>
+      <folder>parsers</folder>
+      <folder>services</folder>
+    </files>
+
+    <languages folder="administrator/language">
+      <language tag="en-GB">en-GB/en-GB.com_rssfactory.ini</language>
+      <language tag="en-GB">en-GB/en-GB.com_rssfactory.sys.ini</language>
+    </languages>
+  </administration>
+
+  <!-- Site Languages -->
+  <languages folder="site/language">
+    <language tag="en-GB">en-GB/en-GB.com_rssfactory.ini</language>
+  </languages>
+
+  <!-- Install SQL -->
+  <install>
+    <sql>
+      <file driver="mysql" charset="utf8mb4">sqls/install.mysql.utf8.sql</file>
+    </sql>
+  </install>
+
+  <!-- Uninstall SQL -->
+  <uninstall>
+    <sql>
+      <file driver="mysql" charset="utf8mb4">sqls/uninstall.mysql.utf8.sql</file>
+    </sql>
+  </uninstall>
+
+  <!-- Update SQL -->
+  <update>
+    <schemas>
+      <schemapath type="mysql">sqls/updates/mysql</schemapath>
+    </schemas>
+  </update>
+</extension>

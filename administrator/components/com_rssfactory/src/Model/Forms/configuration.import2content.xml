@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+    <fieldset name="import2content_general">
+        <field name="enable_import2content" type="FactoryBoolean" default="1"/>
+        <field name="i2c_overwrite_articles" type="FactoryBoolean" default="0"/>
+        <field name="i2c_add_source_link" type="FactoryBoolean" default="1"/>
+        <field name="open_article_source_new_window" type="FactoryBoolean" default="1"/>
+        <field name="i2c_add_read_more" type="FactoryBoolean" default="1"/>
+        <field name="i2c_readmore_options" type="text" default="50" filter="integer"/>
+        <field name="i2c_strip_html_tags" type="FactoryBoolean" default="1"/>
+        <field name="i2c_convert_html_chars" type="FactoryBoolean" default="1"/>
+        <field name="i2c_allowed_html_tags" type="text" default=""/>
+        <field name="i2c_default_prepend_text" type="textarea" display="vertical" rows="5"/>
+        <field name="i2c_default_append_text" type="textarea" display="vertical" rows="5"/>
+    </fieldset>
+
+    <fieldset name="import2content_default_params">
+        <field name="i2c_default_author" type="user"/>
+        <field name="i2c_default_catid" type="category" extension="com_content"/>
+        <field name="i2c_default_article_state" type="FactoryBoolean" default="1"/>
+        <field name="i2c_default_access_level" type="accesslevel"/>
+        <field name="i2c_default_publishing_period" type="text" filter="integer"/>
+    </fieldset>
+
+    <fieldset name="import2content_relevant_stories">
+        <field name="enable_relevant_stories" type="FactoryBoolean" default="1"/>
+        <field name="relevant_stories_position" type="list" default="2">
+            <option value="1">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RELEVANT_STORIES_POSITION_BEFORE</option>
+            <option value="2">COM_RSSFACTORY_CONFIGURATION_FORM_FIELD_RELEVANT_STORIES_POSITION_AFTER</option>
+        </field>
+        <field name="relevant_stories_limit" type="text" default="10" filter="integer"/>
+    </fieldset>
+
+    <fieldset name="import2content_word_filter">
+        <field name="enablei2cwordfilter" type="FactoryBoolean" default="0"/>
+        <field name="i2callowedwords" type="textarea" rows="5" display="vertical"/>
+        <field name="i2cbannedwords" type="textarea" rows="5" display="vertical"/>
+    </fieldset>
+</config>

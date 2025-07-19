@@ -1,0 +1,15 @@
+﻿{
+  "name": "com_rssfactory",
+  "type": "component",
+  "version": "4.3.6",
+  "description": "RSS Factory frontend support for feed submission",
+  "namespace": "Joomla\\Component\\Rssfactory",
+  "files": {
+    "controller": "src/Controller",
+    "model": "src/Model",
+    "view": "src/View",
+    "tmpl": "tmpl",
+    "services": "services",
+    "scriptfile": "rssfactory.php"
+  }
+}
