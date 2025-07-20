@@ -18,14 +18,14 @@
     <menu link="index.php?option=com_rssfactory&amp;view=feeds">RSS Factory</menu>
 
     <submenu>
-      <menu link="index.php?option=com_rssfactory&amp;view=feeds">Feeds</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=comments">Comments</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=ads">Ads</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=submittedfeeds">Submitted Feeds</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=categories">Categories</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=settings">Settings</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=backup">Backup &amp; Restore</menu>
-      <menu link="index.php?option=com_rssfactory&amp;view=about">About</menu>
+      <menu link="option=com_rssfactory&amp;view=feeds">Feeds</menu>
+      <menu link="option=com_rssfactory&amp;view=comments">Comments</menu>
+      <menu link="option=com_rssfactory&amp;view=ads">Ads</menu>
+      <menu link="option=com_rssfactory&amp;view=submittedfeeds">Submitted Feeds</menu>
+      <menu link="option=com_rssfactory&amp;view=categories">Categories</menu>
+      <menu link="option=com_rssfactory&amp;view=settings">Settings</menu>
+      <menu link="option=com_rssfactory&amp;view=backup">Backup &amp; Restore</menu>
+      <menu link="option=com_rssfactory&amp;view=about">About</menu>
     </submenu>
 
     <files folder="administrator">

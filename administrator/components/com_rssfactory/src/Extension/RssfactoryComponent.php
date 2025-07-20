@@ -2,8 +2,11 @@
 
 namespace Joomla\Component\Rssfactory\Administrator\Extension;
 
+echo "✅ RssfactoryComponent loaded<br>";
+
 \defined('_JEXEC') or die;
 
+use Joomla\CMS\Extension\MVCComponent;
 use Joomla\CMS\Application\CMSApplicationInterface;
 use Joomla\CMS\Dispatcher\ComponentDispatcherFactoryInterface;
 use Joomla\CMS\Dispatcher\DispatcherInterface;
@@ -16,7 +19,7 @@ use Joomla\DI\ContainerInterface;
  *
  * @since 4.0
  */
-final class RssfactoryComponent implements ComponentInterface
+class RssfactoryComponent extends MVCComponent
 {
     /**
      * @var ComponentDispatcherFactoryInterface

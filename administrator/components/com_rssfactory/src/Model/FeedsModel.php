@@ -26,18 +26,16 @@ class FeedsModel extends ListModel
      */
     public function getSortFields(): array
     {
-        $textHelper = \Joomla\Component\Rssfactory\Administrator\Helper\Factory\FactoryTextRss::class;
-
         return [
             'f.ordering'    => Text::_('JGRID_HEADING_ORDERING'),
             'f.published'   => Text::_('JSTATUS'),
             'f.title'       => Text::_('JGLOBAL_TITLE'),
             'c.title'       => Text::_('JCATEGORY'),
-            'f.date'        => $textHelper::_('feeds_list_last_refresh'),
-            'f.nrfeeds'     => $textHelper::_('feeds_list_title_nr_feeds'),
-            'f.rsserror'    => $textHelper::_('feeds_list_had_error'),
-            'f.url'         => $textHelper::_('feeds_list_url'),
-            'f.i2c_enabled' => $textHelper::_('feeds_list_i2c_enabled'),
+            'f.date'        => Text::_('feeds_list_last_refresh'),
+            'f.nrfeeds'     => Text::_('feeds_list_title_nr_feeds'),
+            'f.rsserror'    => Text::_('feeds_list_had_error'),
+            'f.url'         => Text::_('feeds_list_url'),
+            'f.i2c_enabled' => Text::_('feeds_list_i2c_enabled'),
             'f.id'          => Text::_('JGRID_HEADING_ID'),
         ];
     }
@@ -59,7 +57,7 @@ class FeedsModel extends ListModel
      */
     public function getPagination(): \Joomla\CMS\Pagination\Pagination
     {
-        return $this->getPaginationObject();
+        return parent::getPagination();
     }
 
     /**
@@ -73,18 +71,20 @@ class FeedsModel extends ListModel
         $query = $db->getQuery(true);
 
         $query->select('f.*')
-              ->from($db->quoteName('#__rssfactory', 'f'));
+            ->from($db->quoteName('#__rssfactory', 'f'));
 
         $query->select('c.title AS category_title')
-              ->leftJoin(
-                  $db->quoteName('#__categories') . ' AS c ON c.id = f.cat AND c.extension = ' . $db->quote('com_rssfactory')
-              );
+            ->join(
+                'LEFT',
+                $db->quoteName('#__categories') . ' AS c ON c.id = f.cat AND c.extension = ' . $db->quote('com_rssfactory')
+            );
 
         $query->select('COUNT(cache.id) AS storiesCached')
-              ->leftJoin(
-                  $db->quoteName('#__rssfactory_cache') . ' AS cache ON cache.rssid = f.id'
-              )
-              ->group('f.id');
+            ->join(
+                'LEFT',
+                $db->quoteName('#__rssfactory_cache') . ' AS cache ON cache.rssid = f.id'
+            )
+            ->group('f.id');
 
         $this->addFilterSearch($query);
         $this->addFilterPublished($query);
@@ -92,6 +92,26 @@ class FeedsModel extends ListModel
         $this->addOrderResults($query);
 
         return $query;
+    }
+
+    /**
+     * Apply ordering to the query.
+     *
+     * @param DatabaseQuery $query
+     * @return void
+     */
+    protected function addOrderResults(DatabaseQuery &$query): void
+    {
+        $ordering  = $this->getState('list.ordering', $this->defaultOrdering);
+        $direction = $this->getState('list.direction', $this->defaultDirection);
+
+        // Validate ordering field
+        $sortFields = array_keys($this->getSortFields());
+        if (!in_array($ordering, $sortFields, true)) {
+            $ordering = $this->defaultOrdering;
+        }
+
+        $query->order($ordering . ' ' . $direction);
     }
 
     /**
@@ -107,11 +127,11 @@ class FeedsModel extends ListModel
         if (!empty($search)) {
             if (stripos($search, 'id:') === 0) {
                 $query->where('f.id = :id')
-                      ->bind(':id', (int) substr($search, 3), ParameterType::INTEGER);
+                    ->bind(':id', (int) substr($search, 3), ParameterType::INTEGER);
             } else {
                 $search = '%' . $query->escape($search, true) . '%';
                 $query->where('f.title LIKE :search')
-                      ->bind(':search', $search, ParameterType::STRING);
+                    ->bind(':search', $search, ParameterType::STRING);
             }
         }
     }
@@ -128,7 +148,23 @@ class FeedsModel extends ListModel
 
         if ($category !== '') {
             $query->where('f.cat = :cat')
-                  ->bind(':cat', $category, ParameterType::INTEGER);
+                ->bind(':cat', $category, ParameterType::INTEGER);
+        }
+    }
+
+    /**
+     * Apply published filter to the query.
+     *
+     * @param DatabaseQuery $query
+     * @return void
+     */
+    protected function addFilterPublished(DatabaseQuery &$query): void
+    {
+        $published = $this->getState('filter.published', '');
+
+        if ($published !== '' && $published !== null) {
+            $query->where('f.published = :published')
+                ->bind(':published', (int) $published, ParameterType::INTEGER);
         }
     }
 
@@ -152,5 +188,75 @@ class FeedsModel extends ListModel
 
         $this->setState('list.ordering', $ordering ?: $this->defaultOrdering);
         $this->setState('list.direction', $direction ?: $this->defaultDirection);
+    }
+
+    /**
+     * Save the ordering of items.
+     *
+     * @param   array  $pks    Array of primary keys.
+     * @param   array  $order  Array of order values.
+     *
+     * @return  bool
+     */
+    public function saveOrder($pks, $order)
+    {
+        $db = Factory::getDbo();
+
+        foreach ($pks as $i => $pk) {
+            $query = $db->getQuery(true)
+                ->update($db->quoteName('#__rssfactory_feeds'))
+                ->set($db->quoteName('ordering') . ' = ' . (int) $order[$i])
+                ->where($db->quoteName('id') . ' = ' . (int) $pk);
+            $db->setQuery($query);
+
+            try {
+                $db->execute();
+            } catch (\Exception $e) {
+                $this->setState('error', $e->getMessage());
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    /**
+     * Refresh feeds by IDs.
+     *
+     * @param array $cid Array of feed IDs.
+     * @return bool True on success, false on failure.
+     */
+    public function refresh(array $cid): bool
+    {
+        // Example logic: update 'refreshed' timestamp for each feed
+        try {
+            $db = $this->getDbo();
+            foreach ($cid as $id) {
+                $query = $db->getQuery(true)
+                    ->update($db->quoteName('#__rssfactory_feeds'))
+                    ->set($db->quoteName('refreshed') . ' = NOW()')
+                    ->where($db->quoteName('id') . ' = ' . (int) $id);
+                $db->setQuery($query);
+                $db->execute();
+            }
+            return true;
+        } catch (\Exception $e) {
+            $this->setState('error', $e->getMessage());
+            return false;
+        }
+    }
+
+    /**
+     * Clear cache for the given feed IDs.
+     *
+     * @param array $cid Array of feed IDs.
+     * @return bool True on success, false on failure.
+     */
+    public function clearCache(array $cid): bool
+    {
+        // Implement your cache clearing logic here.
+        // For demonstration, we'll assume success.
+        // Replace this with actual cache clearing for RSS feeds.
+        return true;
     }
 }

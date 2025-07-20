@@ -4,19 +4,17 @@
   "version": "1.0.0",
   "namespace": "Joomla\\Component\\Rssfactory\\Administrator",
   "class": "Joomla\\Component\\Rssfactory\\Administrator\\Extension\\RssfactoryComponent",
-  "classFile": "administrator/src/Extension/RssfactoryComponent.php",
+  "classFile": "administrator/components/com_rssfactory/src/Extension/RssfactoryComponent.php",
   "files": [
-    "rssfactory.php"
+    "services/provider.php"
   ],
   "scriptfile": "script.php",
   "client": "administrator",
   "description": "RSS Factory Joomla 4 Component",
-  "services": [
-    "administrator/components/com_rssfactory/services/provider.php"
-  ],
   "autoload": {
     "psr-4": {
-      "Joomla\\Component\\Rssfactory\\Administrator\\": "administrator/src/"
+      "Joomla\\Component\\Rssfactory\\Administrator\\": "src/"
     }
   }
 }
+

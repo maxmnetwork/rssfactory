@@ -24,13 +24,13 @@ class JConfig {
 	public $dbsslcert = '';
 	public $dbsslca = '';
 	public $dbsslcipher = '';
-	public $force_ssl = 0;
+	public $force_ssl = 2;
 	public $live_site = '';
 	public $secret = 'u8I065u39N6R7I12';
 	public $gzip = false;
 	public $error_reporting = 'maximum';
 	public $helpurl = 'https://help.joomla.org/proxy?keyref=Help{major}{minor}:{keyref}&lang={langcode}';
-	public $offset = 'UTC';
+	public $offset = 'America/New_York';
 	public $mailonline = true;
 	public $mailer = 'mail';
 	public $mailfrom = 'admin@maxm.social';
@@ -47,7 +47,7 @@ class JConfig {
 	public $cachetime = 15;
 	public $cache_platformprefix = false;
 	public $MetaDesc = '';
-	public $MetaAuthor = true;
+	public $MetaAuthor = false;
 	public $MetaVersion = false;
 	public $robots = '';
 	public $sef = true;
@@ -58,6 +58,7 @@ class JConfig {
 	public $feed_email = 'none';
 	public $log_path = '/home/maxm.social/public_html/j5/administrator/logs';
 	public $tmp_path = '/home/maxm.social/public_html/j5/tmp';
+	public $log_errors = '1';
 	public $lifetime = 150;
 	public $session_handler = 'database';
 	public $shared_session = false;
@@ -93,9 +94,9 @@ class JConfig {
 	public $session_redis_server_db = 0;
 	public $session_metadata_for_guest = true;
 	public $frontediting = 1;
-	public $log_everything = 0;
-	public $log_deprecated = 0;
-	public $log_priorities = array('0' => 'all');
+	public $log_everything = 1;
+	public $log_deprecated = 1;
+	public $log_priorities = array('0' => 'emergency', '1' => 'alert', '2' => 'critical', '3' => 'error', '4' => 'warning', '5' => 'debug');
 	public $log_categories = '';
 	public $log_category_mode = 0;
 	public $cookie_domain = '';

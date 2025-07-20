@@ -1,66 +1,43 @@
 <?php
-/**
- * @package     Joomla.Administrator
- * @subpackage  com_rssfactory
- * @author      thePHPfactory
- * @copyright   Copyright (C) 2011 SKEPSIS Consult SRL. All Rights Reserved.
- * @license     GNU General Public License version 2 or later; see LICENSE.txt
- */
 
 namespace Joomla\Component\Rssfactory\Administrator\Controller;
 
 \defined('_JEXEC') or die;
 
-use Joomla\CMS\MVC\Controller\AdminController;
+use Joomla\CMS\MVC\Controller\BaseController;
 use Joomla\CMS\Session\Session;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Router\Route;
 use Joomla\CMS\Log\Log;
 use Joomla\Utilities\ArrayHelper;
 
-/**
- * Controller class for the Feeds view.
- */
-class FeedsController extends AdminController
+class FeedsController extends BaseController
 {
     protected string $option = 'com_rssfactory';
-
-    /** @var string View list name used in redirects */
     protected string $view_list = 'feeds';
-
-    /** @var string Language prefix for messages */
     protected string $text_prefix = 'COM_RSSFACTORY_FEEDS';
 
-    /**
-     * Gets a model object.
-     *
-     * @param  string  $name    The model name.
-     * @param  string  $prefix  The model class prefix.
-     * @param  array   $config  Configuration array.
-     *
-     * @return \Joomla\CMS\MVC\Model\BaseDatabaseModel
-     */
     public function getModel($name = 'Feeds', $prefix = '', $config = ['ignore_request' => true])
     {
+        echo "FeedsController: getModel() is being called.<br>";  // Debugging output
         return parent::getModel($name, $prefix, $config);
     }
 
+    protected $default_view = 'feeds';
     /**
      * Display the view.
+     *
+     * @param   boolean  $cachable   If true, the view output will be cached.
+     * @param   array    $urlparams  An array of safe URL parameters and their variable types.
+     *
+     * @return  void
      */
     public function display($cachable = false, $urlparams = []): void
     {
-        if (!$this->input->get('view')) {
-            $this->setRedirect(Route::_('index.php?option=com_rssfactory&view=feeds', false))->redirect();
-            return;
-        }
 
         parent::display($cachable, $urlparams);
     }
 
-    /**
-     * Save ordering via AJAX.
-     */
     public function saveOrderAjax(): void
     {
         $pks   = $this->input->post->get('cid', [], 'array');
@@ -70,15 +47,16 @@ class FeedsController extends AdminController
         ArrayHelper::toInteger($order);
 
         $model  = $this->getModel();
+        
+        // Add logging to check if the model is loaded correctly
+        Log::add('View loaded: ' . get_class($view), Log::INFO, 'debug');
+        
         $return = $model->saveOrder($pks, $order);
 
         echo $return ? '1' : '0';
         $this->app->close();
     }
 
-    /**
-     * Refresh selected feeds.
-     */
     public function refresh(): void
     {
         Session::checkToken('post') or exit(Text::_('JINVALID_TOKEN'));
@@ -89,6 +67,10 @@ class FeedsController extends AdminController
             Log::add(Text::_($this->text_prefix . '_NO_ITEM_SELECTED'), Log::WARNING, 'jerror');
         } else {
             $model = $this->getModel();
+            
+            // Add logging to check if the model is loaded correctly
+            Log::add('Model class: ' . get_class($model), Log::INFO, 'debug');
+            
             ArrayHelper::toInteger($cid);
 
             if (!$model->refresh($cid)) {
@@ -102,9 +84,6 @@ class FeedsController extends AdminController
         $this->setRedirect(Route::_('index.php?option=' . $this->option . '&view=' . $this->view_list, false));
     }
 
-    /**
-     * Clear cache for selected feeds.
-     */
     public function clearCache(): void
     {
         Session::checkToken('post') or exit(Text::_('JINVALID_TOKEN'));
@@ -115,6 +94,10 @@ class FeedsController extends AdminController
             Log::add(Text::_($this->text_prefix . '_NO_ITEM_SELECTED'), Log::WARNING, 'jerror');
         } else {
             $model = $this->getModel();
+            
+            // Add logging to check if the model is loaded correctly
+            Log::add('Model class: ' . get_class($model), Log::INFO, 'debug');
+            
             ArrayHelper::toInteger($cid);
 
             if (!$model->clearCache($cid)) {

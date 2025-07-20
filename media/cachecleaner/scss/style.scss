@@ -1,0 +1,62 @@
+/**
+ * [Copyright Regular Labs]
+ */
+
+@import "../../regularlabs/scss/_variables.scss";
+
+div#cachecleaner_message {
+    box-sizing:       border-box;
+    position:         fixed;
+    top:              0;
+    right:            0;
+    padding:          7px 20px;
+    width:            100%;
+    min-height:       1rem;
+    text-align:       center;
+    color:            rl-color(gray, 800);
+    background-color: rl-color(gray, 400);
+    z-index:          2000;
+    opacity:          0.8;
+
+    a {
+        color: rl-color(gray, 300);
+    }
+
+    &.cachecleaner-success {
+        color:            #ffffff;
+        background-color: $rl-green;
+    }
+
+    .cachecleaner-error {
+        color:            #ffffff;
+        background-color: $rl-red;
+    }
+
+    img {
+        vertical-align: sub;
+    }
+
+    &.cachecleaner-loading:before {
+        content:             "";
+        display:             inline-block;
+        animation:           cachecleaner-spinner 1.2s infinite linear;
+        border:              .2rem solid $rl-gray;
+        border-top-color:    $rl-green;
+        border-right-color:  $rl-yellow;
+        border-bottom-color: $rl-red;
+        border-left-color:   $rl-blue;
+        border-radius:       50%;
+        margin-right:        10px;
+        height:              1rem;
+        width:               1rem;
+    }
+
+    @keyframes cachecleaner-spinner {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}

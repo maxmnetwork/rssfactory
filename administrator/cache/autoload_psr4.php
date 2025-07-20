@@ -250,4 +250,8 @@ return [
 	'Joomla\\Plugin\\Workflow\\Featuring\\' => [JPATH_PLUGINS . '/workflow/featuring/src'],
 	'Joomla\\Plugin\\Workflow\\Notification\\' => [JPATH_PLUGINS . '/workflow/notification/src'],
 	'Joomla\\Plugin\\Workflow\\Publishing\\' => [JPATH_PLUGINS . '/workflow/publishing/src'],
+	'RegularLabs\\Library\\' => [JPATH_LIBRARIES . '/regularlabs/src'],
+	'RegularLabs\\Module\\CacheCleaner\\Administrator\\' => [JPATH_ADMINISTRATOR . '/modules/mod_cachecleaner/src'],
+	'RegularLabs\\Plugin\\System\\CacheCleaner\\' => [JPATH_PLUGINS . '/system/cachecleaner/src'],
+	'RegularLabs\\Plugin\\System\\RegularLabs\\' => [JPATH_PLUGINS . '/system/regularlabs/src'],
 ];

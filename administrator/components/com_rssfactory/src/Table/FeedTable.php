@@ -22,6 +22,8 @@ defined('_JEXEC') or die;
 use Joomla\CMS\Table\Table;
 use Joomla\Registry\Registry;
 use Joomla\Database\DatabaseDriver;
+use Joomla\CMS\Factory;
+use Joomla\CMS\HTTP\Transport\CurlTransport;
 
 class FeedTable extends Table
 {
@@ -99,5 +101,37 @@ class FeedTable extends Table
         $params = is_string($this->params) ? new Registry($this->params) : $this->params;
 
         return (array)$params->get('i2c_rules', []);
+    }
+
+    /**
+     * Refresh the feed content by fetching it from its URL.
+     *
+     * @return void
+     */
+    public function refreshContent()
+    {
+        // Assuming the feed URL is stored in the 'url' field
+        $url = $this->url;
+
+        // Validate URL format
+        if (empty($url)) {
+            throw new \Exception('Invalid feed URL.');
+        }
+
+        // Fetch the content using Joomla 4 HTTP client
+        $http = \Joomla\CMS\Http\HttpFactory::getHttp();
+        $response = $http->get($url);
+
+        if ($response->code === 200) {
+            // Content fetched successfully, update the feed's content field
+            $this->content = $response->body; // Assuming 'content' is the field where feed content is stored
+            $this->last_refresh = Factory::getDate()->toSql();  // Set last refresh time
+            $this->rsserror = 0;  // Reset error flag
+
+        } else {
+            // Log error if unable to fetch the content
+            $this->rsserror = 1;
+            $this->content = '';  // Clear existing content if refresh fails
+        }
     }
 }

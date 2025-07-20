@@ -6,7 +6,6 @@ namespace Joomla\Component\Rssfactory\Administrator\View\Feeds;
 
 use Joomla\CMS\MVC\View\HtmlView;
 use Joomla\CMS\Pagination\Pagination;
-use Joomla\CMS\Object\CMSObject; // Optional, only if needed for state typing
 use Joomla\CMS\Factory;
 
 /**

@@ -22,6 +22,25 @@ use Joomla\Registry\Registry;
  */
 class AboutModel extends BaseDatabaseModel
 {
+        /**
+     * Returns information for the About view.
+     *
+     * @return object
+     */
+    public function getInformation()
+    {
+        // Example data structure, replace with actual logic as needed
+        return (object) [
+            'latestVersion'  => '5.0.0',
+            'versionHistory' => [],
+            'downloadLink'   => '',
+            'otherProducts'  => [],
+            'aboutFactory'   => 'RSS Factory is a Joomla extension.',
+            'currentVersion' => '5.0.0',
+            'newVersion'     => '5.0.1'
+        ];
+    }
+    
     /**
      * Get the version of the component and other related data
      *

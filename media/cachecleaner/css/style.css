@@ -1,0 +1,59 @@
+/**
+ * @package         Cache Cleaner
+ * @version         9.3.0PRO
+ * 
+ * @author          Peter van Westen <info@regularlabs.com>
+ * @link            https://regularlabs.com
+ * @copyright       Copyright © 2024 Regular Labs All Rights Reserved
+ * @license         GNU General Public License version 2 or later
+ */
+div#cachecleaner_message {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  right: 0;
+  padding: 7px 20px;
+  width: 100%;
+  min-height: 1rem;
+  text-align: center;
+  color: #2a303a;
+  background-color: #929cab;
+  z-index: 2000;
+  opacity: 0.8;
+}
+div#cachecleaner_message a {
+  color: #c0c6cf;
+}
+div#cachecleaner_message.cachecleaner-success {
+  color: #ffffff;
+  background-color: #18a047;
+}
+div#cachecleaner_message .cachecleaner-error {
+  color: #ffffff;
+  background-color: #dc2a28;
+}
+div#cachecleaner_message img {
+  vertical-align: sub;
+}
+div#cachecleaner_message.cachecleaner-loading:before {
+  content: "";
+  display: inline-block;
+  animation: cachecleaner-spinner 1.2s infinite linear;
+  border: 0.2rem solid #637188;
+  border-top-color: #18a047;
+  border-right-color: #ffa813;
+  border-bottom-color: #dc2a28;
+  border-left-color: #115dda;
+  border-radius: 50%;
+  margin-right: 10px;
+  height: 1rem;
+  width: 1rem;
+}
+@keyframes cachecleaner-spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
+  <packagename>cachecleaner</packagename>
+  <name>PKG_CACHECLEANER</name>
+  <version>9.3.0PRO</version>
+  <creationDate>June 2024</creationDate>
+  <author>Regular Labs (Peter van Westen)</author>
+  <authorEmail>info@regularlabs.com</authorEmail>
+  <authorUrl>https://regularlabs.com</authorUrl>
+  <copyright>Copyright © 2024 Regular Labs - All Rights Reserved</copyright>
+  <license>GNU General Public License version 2 or later</license>
+  <scriptfile>script.install.php</scriptfile>
+  <blockChildUninstall>true</blockChildUninstall>
+  <files folder="packages/j4">
+    
+    <file type="module" position="status" client="administrator" id="mod_cachecleaner">mod_cachecleaner</file>
+    <file type="plugin" group="system" id="cachecleaner">plg_system_cachecleaner</file>
+  </files>
+  
+  
+  <languages folder="language">
+    <language tag="en-GB">en-GB/en-GB.pkg_cachecleaner.sys.ini</language>
+  </languages>
+  <updateservers>
+    <server type="extension" priority="1" name="Cache Cleaner [PRO]">https://download.regularlabs.com/updates.xml?e=cachecleaner&amp;pro=1&amp;type=.xml</server>
+  </updateservers>
+</extension>
