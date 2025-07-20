@@ -455,3 +455,56 @@
 #4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
 #5 [ROOT]/administrator/index.php(32): require_once('...')
 #6 {main}
+2025-07-20T18:34:52+00:00	INFO 192.168.1.9	updater	Loading information from update site #1 with name "Joomla! Core" and URL https://update.joomla.org/core/list.xml took 0.26 seconds
+2025-07-20T18:34:52+00:00	INFO 192.168.1.9	updater	Loading information from update site #2 with name "Accredited Joomla! Translations" and URL https://update.joomla.org/language/translationlist_4.xml took 0.13 seconds
+2025-07-20T18:34:53+00:00	INFO 192.168.1.9	updater	Loading information from update site #3 with name "Joomla! Update Component" and URL https://update.joomla.org/core/extensions/com_joomlaupdate.xml took 0.18 seconds
+2025-07-20T18:34:53+00:00	INFO 192.168.1.9	updater	Loading information from update site #4 with name "Regular Labs Library" and URL https://download.regularlabs.com/updates.xml?e=library&type=.xml took 0.61 seconds
+2025-07-20T18:34:54+00:00	INFO 192.168.1.9	updater	Loading information from update site #5 with name "Cache Cleaner [PRO]" and URL https://download.regularlabs.com/updates.xml?e=cachecleaner&pro=1&type=.xml took 0.55 seconds
+2025-07-20T18:35:22+00:00	CRITICAL 192.168.1.9	error	Uncaught Throwable of type Exception thrown with message "Component not found.". Stack trace: #0 [ROOT]/libraries/src/Component/ComponentHelper.php(361): Joomla\CMS\Dispatcher\LegacyComponentDispatcher->dispatch()
+#1 [ROOT]/libraries/src/Application/AdministratorApplication.php(143): Joomla\CMS\Component\ComponentHelper::renderComponent()
+#2 [ROOT]/libraries/src/Application/AdministratorApplication.php(186): Joomla\CMS\Application\AdministratorApplication->dispatch()
+#3 [ROOT]/libraries/src/Application/CMSApplication.php(293): Joomla\CMS\Application\AdministratorApplication->doExecute()
+#4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
+#5 [ROOT]/administrator/index.php(32): require_once('...')
+#6 {main}
+2025-07-20T18:44:52+00:00	CRITICAL 192.168.1.9	error	Uncaught Throwable of type Exception thrown with message "Component not found.". Stack trace: #0 [ROOT]/libraries/src/Component/ComponentHelper.php(361): Joomla\CMS\Dispatcher\LegacyComponentDispatcher->dispatch()
+#1 [ROOT]/libraries/src/Application/AdministratorApplication.php(143): Joomla\CMS\Component\ComponentHelper::renderComponent()
+#2 [ROOT]/libraries/src/Application/AdministratorApplication.php(186): Joomla\CMS\Application\AdministratorApplication->dispatch()
+#3 [ROOT]/libraries/src/Application/CMSApplication.php(293): Joomla\CMS\Application\AdministratorApplication->doExecute()
+#4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
+#5 [ROOT]/administrator/index.php(32): require_once('...')
+#6 {main}
+2025-07-20T18:48:22+00:00	CRITICAL 192.168.1.9	error	Uncaught Throwable of type Exception thrown with message "Component not found.". Stack trace: #0 [ROOT]/libraries/src/Component/ComponentHelper.php(361): Joomla\CMS\Dispatcher\LegacyComponentDispatcher->dispatch()
+#1 [ROOT]/libraries/src/Application/AdministratorApplication.php(143): Joomla\CMS\Component\ComponentHelper::renderComponent()
+#2 [ROOT]/libraries/src/Application/AdministratorApplication.php(186): Joomla\CMS\Application\AdministratorApplication->dispatch()
+#3 [ROOT]/libraries/src/Application/CMSApplication.php(293): Joomla\CMS\Application\AdministratorApplication->doExecute()
+#4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
+#5 [ROOT]/administrator/index.php(32): require_once('...')
+#6 {main}
+2025-07-20T19:03:32+00:00	CRITICAL 192.168.1.9	error	Uncaught Throwable of type Exception thrown with message "Component not found.". Stack trace: #0 [ROOT]/libraries/src/Component/ComponentHelper.php(361): Joomla\CMS\Dispatcher\LegacyComponentDispatcher->dispatch()
+#1 [ROOT]/libraries/src/Application/AdministratorApplication.php(143): Joomla\CMS\Component\ComponentHelper::renderComponent()
+#2 [ROOT]/libraries/src/Application/AdministratorApplication.php(186): Joomla\CMS\Application\AdministratorApplication->dispatch()
+#3 [ROOT]/libraries/src/Application/CMSApplication.php(293): Joomla\CMS\Application\AdministratorApplication->doExecute()
+#4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
+#5 [ROOT]/administrator/index.php(32): require_once('...')
+#6 {main}
+2025-07-20T19:03:36+00:00	INFO 192.168.1.9	updater	Loading information from update site #1 with name "Joomla! Core" and URL https://update.joomla.org/core/list.xml took 0.26 seconds
+2025-07-20T19:03:36+00:00	INFO 192.168.1.9	updater	Loading information from update site #2 with name "Accredited Joomla! Translations" and URL https://update.joomla.org/language/translationlist_4.xml took 0.12 seconds
+2025-07-20T19:03:36+00:00	INFO 192.168.1.9	updater	Loading information from update site #3 with name "Joomla! Update Component" and URL https://update.joomla.org/core/extensions/com_joomlaupdate.xml took 0.13 seconds
+2025-07-20T19:03:37+00:00	INFO 192.168.1.9	updater	Loading information from update site #4 with name "Regular Labs Library" and URL https://download.regularlabs.com/updates.xml?e=library&type=.xml took 0.68 seconds
+2025-07-20T19:03:37+00:00	INFO 192.168.1.9	updater	Loading information from update site #5 with name "Cache Cleaner [PRO]" and URL https://download.regularlabs.com/updates.xml?e=cachecleaner&pro=1&type=.xml took 0.56 seconds
+2025-07-20T19:03:40+00:00	CRITICAL 192.168.1.9	error	Uncaught Throwable of type Exception thrown with message "Component not found.". Stack trace: #0 [ROOT]/libraries/src/Component/ComponentHelper.php(361): Joomla\CMS\Dispatcher\LegacyComponentDispatcher->dispatch()
+#1 [ROOT]/libraries/src/Application/AdministratorApplication.php(143): Joomla\CMS\Component\ComponentHelper::renderComponent()
+#2 [ROOT]/libraries/src/Application/AdministratorApplication.php(186): Joomla\CMS\Application\AdministratorApplication->dispatch()
+#3 [ROOT]/libraries/src/Application/CMSApplication.php(293): Joomla\CMS\Application\AdministratorApplication->doExecute()
+#4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
+#5 [ROOT]/administrator/index.php(32): require_once('...')
+#6 {main}
+2025-07-20T19:16:31+00:00	CRITICAL 192.168.1.9	error	Uncaught Throwable of type Exception thrown with message "Component not found.". Stack trace: #0 [ROOT]/libraries/src/Component/ComponentHelper.php(361): Joomla\CMS\Dispatcher\LegacyComponentDispatcher->dispatch()
+#1 [ROOT]/libraries/src/Application/AdministratorApplication.php(143): Joomla\CMS\Component\ComponentHelper::renderComponent()
+#2 [ROOT]/libraries/src/Application/AdministratorApplication.php(186): Joomla\CMS\Application\AdministratorApplication->dispatch()
+#3 [ROOT]/libraries/src/Application/CMSApplication.php(293): Joomla\CMS\Application\AdministratorApplication->doExecute()
+#4 [ROOT]/administrator/includes/app.php(61): Joomla\CMS\Application\CMSApplication->execute()
+#5 [ROOT]/administrator/index.php(32): require_once('...')
+#6 {main}
+2025-07-20T19:31:29+00:00	INFO 192.168.1.9	updater	Loading information from update site #1 with name "Joomla! Core" and URL https://update.joomla.org/core/list.xml took 0.28 seconds

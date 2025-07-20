@@ -16,7 +16,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.admin-users-groups",
@@ -28,7 +28,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.admin-users-mail.es5",
@@ -41,7 +41,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.admin-users-mail",
@@ -53,7 +53,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.two-factor-focus.es5",
@@ -66,7 +66,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.two-factor-list.es5",
@@ -79,7 +79,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.two-factor-focus",
@@ -91,7 +91,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_users.two-factor-list",
@@ -103,7 +103,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         }
     ]
 }

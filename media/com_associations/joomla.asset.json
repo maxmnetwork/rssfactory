@@ -24,7 +24,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.admin-associations-default",
@@ -36,7 +36,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.admin-associations-modal.es5",
@@ -49,7 +49,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.admin-associations-modal",
@@ -61,7 +61,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.associations-edit.es5",
@@ -74,7 +74,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.associations-edit",
@@ -87,13 +87,13 @@
                 "type": "module",
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.sidebyside",
             "type": "style",
             "uri": "com_associations/sidebyside.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_associations.sidebyside",
@@ -106,7 +106,7 @@
             "attributes": {
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         }
     ]
 }

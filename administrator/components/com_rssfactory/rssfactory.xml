@@ -44,7 +44,6 @@
       <language tag="en-GB">en-GB/en-GB.com_rssfactory.ini</language>
       <language tag="en-GB">en-GB/en-GB.com_rssfactory.sys.ini</language>
     </languages>
-  </administration>
 
   <!-- Site Languages -->
   <languages folder="site/language">
@@ -71,4 +70,5 @@
       <schemapath type="mysql">sqls/updates/mysql</schemapath>
     </schemas>
   </update>
+  </administration>
 </extension>

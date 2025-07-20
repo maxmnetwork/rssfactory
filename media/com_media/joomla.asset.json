@@ -16,7 +16,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_media.edit-images",
@@ -28,13 +28,13 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_media.mediamanager",
             "type": "style",
             "uri": "com_media/media-manager.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_media.mediamanager",
@@ -46,7 +46,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_media.mediamanager.es5",
@@ -60,7 +60,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         }
     ]
 }

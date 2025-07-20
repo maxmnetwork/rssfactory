@@ -16,7 +16,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-article-pagebreak",
@@ -29,7 +29,7 @@
                 "type": "module",
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-article-readmore",
@@ -41,7 +41,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-article-readmore.es5",
@@ -54,7 +54,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-articles-batch",
@@ -66,7 +66,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-articles-batch.es5",
@@ -79,7 +79,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-articles-stage",
@@ -91,7 +91,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-articles-stage.es5",
@@ -104,7 +104,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-articles-modal.es5",
@@ -117,7 +117,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.admin-articles-modal",
@@ -129,7 +129,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.form-edit.es5",
@@ -142,7 +142,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.form-edit",
@@ -154,7 +154,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.articles-list",
@@ -166,7 +166,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.articles-list.es5",
@@ -179,7 +179,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.articles-status.es5",
@@ -192,7 +192,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "com_content.articles-status",
@@ -204,7 +204,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         }
     ]
 }

@@ -1,0 +1,15 @@
+# Joomla sensitive/core paths
+configuration.php
+/cache/
+/logs/
+/tmp/
+/installation/
+/.env
+
+# IDE/editor folders
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db

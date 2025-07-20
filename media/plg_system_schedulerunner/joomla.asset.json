@@ -16,7 +16,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "plg_system_schedulerunner.run-schedule.es5",
@@ -29,7 +29,7 @@
                 "nomodule": true,
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         }
     ]
 }

@@ -153,3 +153,19 @@ CREATE TABLE `#__rssfactory_voting` (
   KEY `userid` (`userid`),
   KEY `voteHash` (`voteHash`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+INSERT INTO `#__extensions`
+(`name`, `type`, `element`, `folder`, `client_id`, `enabled`, `access`, `protected`, `manifest_cache`)
+VALUES
+(
+  'com_rssfactory',
+  'component',
+  'com_rssfactory',
+  '',
+  1,
+  1,
+  1,
+  0,
+  '{"name":"com_rssfactory","type":"component","version":"1.0.0"}'
+);

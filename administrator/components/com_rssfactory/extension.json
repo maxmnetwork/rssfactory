@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "namespace": "Joomla\\Component\\Rssfactory\\Administrator",
   "class": "Joomla\\Component\\Rssfactory\\Administrator\\Extension\\RssfactoryComponent",
-  "classFile": "administrator/components/com_rssfactory/src/Extension/RssfactoryComponent.php",
+  "classFile": "src/Extension/RssfactoryComponent.php",
   "files": [
     "services/provider.php"
   ],

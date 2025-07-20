@@ -46,14 +46,14 @@
                 "defer": true,
                 "nomodule": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "core",
             "type": "script",
             "class": "CoreAssetItem",
             "uri": "system/core.min.js",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "keepalive",
@@ -67,7 +67,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "messages-legacy",
@@ -80,7 +80,7 @@
             "dependencies": [
                 "core"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "messages",
@@ -92,7 +92,7 @@
             "dependencies": [
                 "messages-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "inlinehelp-legacy",
@@ -105,7 +105,7 @@
             "dependencies": [
                 "core"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "inlinehelp",
@@ -117,7 +117,7 @@
             "dependencies": [
                 "inlinehelp-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "multiselect",
@@ -129,7 +129,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "showon.es5",
@@ -142,7 +142,7 @@
                 "defer": true,
                 "nomodule": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "showon",
@@ -155,7 +155,7 @@
             "attributes": {
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "searchtools",
@@ -167,7 +167,7 @@
             "attributes": {
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "table.columns",
@@ -181,13 +181,13 @@
                 "defer": true,
                 "type": "module"
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "switcher",
             "type": "style",
             "uri": "system/fields/switcher.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "form.validate",
@@ -200,7 +200,7 @@
                 "core"
             ],
             "uri": "system/fields/validate.min.js",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.color-adv",
@@ -212,7 +212,7 @@
             "dependencies": [
                 "minicolors"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "joomla.draggable",
@@ -224,7 +224,7 @@
             "dependencies": [
                 "dragula"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "highlight",
@@ -236,7 +236,7 @@
             "dependencies": [
                 "highlight-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "highlight-legacy",
@@ -249,7 +249,7 @@
             "dependencies": [
                 "core"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.passwordview",
@@ -261,7 +261,7 @@
             "dependencies": [
                 "core"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.passwordstrength",
@@ -274,19 +274,19 @@
                 "core",
                 "form.validate"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.calendar",
             "type": "style",
             "uri": "system/fields/calendar.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.calendar-rtl",
             "type": "style",
             "uri": "system/fields/calendar-rtl.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.calendar",
@@ -298,7 +298,7 @@
             "dependencies": [
                 "field.calendar.helper"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.color-slider",
@@ -307,7 +307,7 @@
             "attributes": {
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "field.modal-fields",
@@ -319,7 +319,7 @@
             "attributes": {
                 "defer": true
             },
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-fancy-select",
@@ -332,7 +332,7 @@
                 "choicesjs",
                 "webcomponent.field-fancy-select-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-fancy-select-legacy",
@@ -346,19 +346,19 @@
                 "wcpolyfill",
                 "choicesjs"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-media",
             "type": "style",
             "uri": "system/fields/joomla-field-media.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.media-select",
             "type": "style",
             "uri": "system/fields/joomla-media-select.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.media-select-legacy",
@@ -371,7 +371,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.media-select",
@@ -383,7 +383,7 @@
             "dependencies": [
                 "webcomponent.media-select-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-media-legacy",
@@ -396,7 +396,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-media",
@@ -408,7 +408,7 @@
             "dependencies": [
                 "webcomponent.field-media-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-module-order-legacy",
@@ -421,13 +421,13 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-permissions",
             "type": "style",
             "uri": "system/fields/joomla-field-permissions.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-module-order",
@@ -439,7 +439,7 @@
             "dependencies": [
                 "webcomponent.field-module-order-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-permissions-legacy",
@@ -452,7 +452,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-permissions",
@@ -464,7 +464,7 @@
             "dependencies": [
                 "webcomponent.field-permissions-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-send-test-mail-legacy",
@@ -477,13 +477,13 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-simple-color",
             "type": "style",
             "uri": "system/fields/joomla-field-simple-color.min.css",
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-send-test-mail",
@@ -495,7 +495,7 @@
             "dependencies": [
                 "webcomponent.field-send-test-mail-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-simple-color-legacy",
@@ -508,7 +508,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-simple-color",
@@ -520,7 +520,7 @@
             "dependencies": [
                 "webcomponent.field-simple-color-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-subform-legacy",
@@ -533,7 +533,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-subform",
@@ -545,7 +545,7 @@
             "dependencies": [
                 "webcomponent.field-subform-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-user-legacy",
@@ -558,7 +558,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.field-user",
@@ -570,7 +570,7 @@
             "dependencies": [
                 "webcomponent.field-user-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.core-loader-legacy",
@@ -583,7 +583,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.core-loader",
@@ -595,7 +595,7 @@
             "dependencies": [
                 "webcomponent.core-loader-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.hidden-mail-legacy",
@@ -608,7 +608,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.hidden-mail",
@@ -620,7 +620,7 @@
             "dependencies": [
                 "webcomponent.hidden-mail-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.toolbar-button-legacy",
@@ -633,7 +633,7 @@
             "dependencies": [
                 "wcpolyfill"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "webcomponent.toolbar-button",
@@ -645,7 +645,7 @@
             "dependencies": [
                 "webcomponent.toolbar-button-legacy"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         },
         {
             "name": "list-view",
@@ -657,7 +657,7 @@
             "dependencies": [
                 "core"
             ],
-            "version": "88832137514a7e8d53e56cd6606fd270"
+            "version": "1db607261550dcef5fddf440abdd512f"
         }
     ]
 }
